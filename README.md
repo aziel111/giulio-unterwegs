@@ -42,6 +42,6 @@ Das Video wird erst nach dem Klick von YouTube geladen (Datenschutz).
 ## Schnell anpassen
 
 - **E-Mail**: überall `contact@aziel.me` – mit „Suchen & Ersetzen“ in `index.html`, `impressum.html`, `datenschutz.html` tauschen.
-- **Instagram**: `pizzeriagiulio_ffm` und `aziel_timur` – sobald es einen eigenen Kanal für Giulio Unterwegs gibt, hier eintragen.
+- **Instagram**: Hauptkanal ist `giulio_unterwegs` (Folgen-Link, „Per Instagram schreiben“, Kontakt, Fußzeile, Impressum). Daneben im Kontakt: `pizzeriagiulio_ffm` und `aziel_timur`.
 - **Gründungsphase/kostenlos**: Abschnitt „Für Läden“ in `index.html`, Zeile mit `Gründungsphase`.
 - Nach Änderungen an CSS/JS die Versionsnummer `?v=1` erhöhen, damit Browser die neue Datei laden.
