@@ -36,7 +36,9 @@ assets/
    | AAAA (optional) | @ | 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153 |
    | CNAME | www | aziel111.github.io |
 
-   Alte A-Einträge für `@` (z. B. Parkseite des Anbieters) löschen. **MX-Einträge für die E-Mail info@giulio-unterwegs.de nicht anfassen.**
+   **STRATO** (Domain liegt dort): Kunden-Login → Domains → Domainverwaltung → Zahnrad bei giulio-unterwegs.de → Reiter DNS → A-Record „verwalten“ → „Eigene IP-Adresse“. STRATO erlaubt nur **einen** A-Eintrag – `185.199.108.153` reicht. AAAA genauso mit `2606:50c0:8000::153`. CNAME geht bei STRATO nur für Subdomains: dafür erst die Subdomain `www` anlegen.
+
+   Alte A-Einträge für `@` (z. B. Parkseite des Anbieters) ersetzen. **MX-Einträge für die E-Mail info@giulio-unterwegs.de nicht anfassen.**
 4. Nach einigen Minuten bis Stunden zeigt GitHub unter Settings → Pages „DNS check successful“. Dann **„Enforce HTTPS“** anhaken.
 5. Empfohlen: Domain im GitHub-Profil unter **Settings → Pages → Verified domains** bestätigen, damit niemand sonst sie für eine eigene Seite nutzen kann.
 
