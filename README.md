@@ -1,6 +1,6 @@
 # Giulio Unterwegs
 
-Website für **Giulio Unterwegs**: Koch Giulio (Xhulio Hackaj) besucht Cafés, Bistros und Restaurants in Frankfurt, Aziel Timur filmt.
+Website für **Giulio Unterwegs**: Koch Giulio besucht Cafés, Bistros und Restaurants in Frankfurt, Aziel Timur filmt.
 Statische Seite für GitHub Pages, gleiche Formensprache wie aziel.me (Schwarz, gebürstetes Gold, Inter Display + Golos Text).
 
 ## Struktur
