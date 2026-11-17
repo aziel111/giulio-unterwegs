@@ -7,7 +7,8 @@ Statische Seite für GitHub Pages, gleiche Formensprache wie aziel.me (Schwarz, 
 
 ```
 index.html          Startseite: Hero, Zahlen, Über uns (Giulio + Aziel), Format, Folgen, Für Läden, Partner, Kontakt
-links/index.html    Link-Seite für die Instagram-Bio (…/giulio-unterwegs/links/)
+links/index.html    Link-Seite für die Instagram-Bio (giulio-unterwegs.de/links/)
+CNAME               eigene Domain für GitHub Pages: giulio-unterwegs.de
 impressum.html      Impressum (gelb markierte Stellen vor dem Livegang prüfen!)
 datenschutz.html    Datenschutzerklärung
 favicon.svg         Icon im Browser-Tab
@@ -20,14 +21,26 @@ assets/
   img/              Fotos, Ornament, og.jpg (Vorschaubild für WhatsApp/Instagram-Links)
 ```
 
-## Online stellen (GitHub Pages)
+## Online stellen (GitHub Pages + Domain giulio-unterwegs.de)
 
-1. Auf github.com ein neues Repository anlegen, z. B. `giulio-unterwegs` (Public).
-2. Alle Dateien aus diesem Ordner hochladen (inkl. `.nojekyll`) – per „Add file → Upload files“ oder per Git.
-3. Im Repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / `/ (root)`** → Save.
-4. Nach 1–2 Minuten ist die Seite unter `https://aziel111.github.io/giulio-unterwegs/` erreichbar.
+1. Im Repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch: `main` / `/ (root)`** → Save.
+2. Die Datei `CNAME` (Inhalt: `giulio-unterwegs.de`) liegt schon im Repo. Unter **Settings → Pages → Custom domain** steht die Domain dann automatisch drin.
+3. Beim Domain-Anbieter (DNS-Einstellungen von giulio-unterwegs.de) eintragen:
 
-**Eigene Domain** (z. B. giulio-unterwegs.de): Datei `CNAME` mit dem Domainnamen anlegen, beim Domain-Anbieter die DNS-Einträge für GitHub Pages setzen und in `index.html` die drei Adressen bei `canonical`, `og:url` und `og:image` anpassen.
+   | Typ | Name / Host | Wert |
+   |---|---|---|
+   | A | @ | 185.199.108.153 |
+   | A | @ | 185.199.109.153 |
+   | A | @ | 185.199.110.153 |
+   | A | @ | 185.199.111.153 |
+   | AAAA (optional) | @ | 2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153 |
+   | CNAME | www | aziel111.github.io |
+
+   Alte A-Einträge für `@` (z. B. Parkseite des Anbieters) löschen. **MX-Einträge für die E-Mail info@giulio-unterwegs.de nicht anfassen.**
+4. Nach einigen Minuten bis Stunden zeigt GitHub unter Settings → Pages „DNS check successful“. Dann **„Enforce HTTPS“** anhaken.
+5. Empfohlen: Domain im GitHub-Profil unter **Settings → Pages → Verified domains** bestätigen, damit niemand sonst sie für eine eigene Seite nutzen kann.
+
+Die alte Adresse `aziel111.github.io/giulio-unterwegs` leitet danach automatisch auf `giulio-unterwegs.de` weiter.
 
 ## Neue Folge eintragen
 
@@ -42,12 +55,12 @@ Das Video wird erst nach dem Klick von YouTube geladen (Datenschutz).
 
 ## Schnell anpassen
 
-- **E-Mail**: überall `contact@aziel.me` – mit „Suchen & Ersetzen“ in `index.html`, `impressum.html`, `datenschutz.html` tauschen.
+- **E-Mail**: überall `info@giulio-unterwegs.de` (Startseite, Link-Seite, Impressum, Datenschutz).
 - **Instagram**: Hauptkanal ist `giulio_unterwegs` (Folgen-Link, „Per Instagram schreiben“, Kontakt, Fußzeile, Impressum). Daneben im Kontakt: `pizzeriagiulio_ffm` und `aziel_timur`.
 - **Gründungsphase/kostenlos**: Abschnitt „Für Läden“ in `index.html`, Zeile mit `Gründungsphase`.
 - Nach Änderungen an CSS/JS die Versionsnummer `?v=1` erhöhen, damit Browser die neue Datei laden.
 
 ## Link-Seite für Instagram
 
-`links/index.html` ist die Seite für die Bio von @giulio_unterwegs: https://aziel111.github.io/giulio-unterwegs/links/
+`links/index.html` ist die Seite für die Bio von @giulio_unterwegs: https://giulio-unterwegs.de/links/
 Buttons ändern: In `links/index.html` jeweils einen `<li>…</li>`-Block kopieren und Text/Link anpassen.
