@@ -7,6 +7,7 @@ Statische Seite für GitHub Pages, gleiche Formensprache wie aziel.me (Schwarz, 
 
 ```
 index.html          Startseite: Hero, Zahlen, Über uns (Giulio + Aziel), Format, Folgen, Für Läden, Partner, Kontakt
+links/index.html    Link-Seite für die Instagram-Bio (…/giulio-unterwegs/links/)
 impressum.html      Impressum (gelb markierte Stellen vor dem Livegang prüfen!)
 datenschutz.html    Datenschutzerklärung
 favicon.svg         Icon im Browser-Tab
@@ -45,3 +46,8 @@ Das Video wird erst nach dem Klick von YouTube geladen (Datenschutz).
 - **Instagram**: Hauptkanal ist `giulio_unterwegs` (Folgen-Link, „Per Instagram schreiben“, Kontakt, Fußzeile, Impressum). Daneben im Kontakt: `pizzeriagiulio_ffm` und `aziel_timur`.
 - **Gründungsphase/kostenlos**: Abschnitt „Für Läden“ in `index.html`, Zeile mit `Gründungsphase`.
 - Nach Änderungen an CSS/JS die Versionsnummer `?v=1` erhöhen, damit Browser die neue Datei laden.
+
+## Link-Seite für Instagram
+
+`links/index.html` ist die Seite für die Bio von @giulio_unterwegs: https://aziel111.github.io/giulio-unterwegs/links/
+Buttons ändern: In `links/index.html` jeweils einen `<li>…</li>`-Block kopieren und Text/Link anpassen.

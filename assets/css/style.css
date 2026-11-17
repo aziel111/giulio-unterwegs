@@ -427,3 +427,100 @@ footer.site a:hover { color:var(--gold) }
 .legal a { color:var(--gold) }
 .legal .muted { color:var(--leise) }
 .fill { background:rgba(172,130,77,.22); border-bottom:1px dashed var(--gold); padding:0 .25em }
+
+/* =========================================================
+   LINK-SEITE (/links/) – für die Instagram-Bio
+   ========================================================= */
+
+.linkseite {
+  background:
+    radial-gradient(70% 45% at 50% 0%, rgba(172,130,77,.16), rgba(0,0,0,0) 70%),
+    radial-gradient(60% 40% at 50% 100%, rgba(172,130,77,.08), rgba(0,0,0,0) 70%),
+    #000;
+  min-height:100svh;
+}
+.lk { position:relative; width:100%; max-width:480px; margin:0 auto; min-height:100svh; display:flex; flex-direction:column; background:#000 }
+@media (min-width:520px) { .lk { border-inline:1px solid var(--linie-zart); box-shadow:0 0 120px rgba(0,0,0,.9) } }
+
+.lk-cover { position:relative; height:clamp(190px, 52vw, 250px); margin:0; overflow:hidden }
+.lk-cover img { width:100%; height:100%; object-fit:cover; object-position:50% 55%; filter:brightness(.82) contrast(1.06) saturate(.95) }
+.lk-cover::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg, #000 0%, rgba(0,0,0,.55) 32%, rgba(0,0,0,0) 62%), linear-gradient(180deg, rgba(0,0,0,.78) 0%, rgba(0,0,0,.35) 22%, rgba(0,0,0,0) 40%) }
+.lk-marke-oben { position:absolute; z-index:2; left:18px; top:16px; display:flex; align-items:baseline; gap:.45em; text-decoration:none; filter:drop-shadow(0 1px 10px rgba(0,0,0,.85)) }
+.lk-marke-oben .logo-marke { font-size:1.3rem }
+.lk-marke-oben .logo-zusatz { font-size:.62rem; color:var(--champagner); opacity:.8 }
+.lk-teilen {
+  position:absolute; z-index:2; right:14px; top:12px; width:42px; height:42px; display:grid; place-items:center; padding:0; cursor:pointer;
+  border-radius:50%; border:1px solid rgba(233,207,152,.55); background:rgba(0,0,0,.35); color:var(--champagner);
+  -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); transition:background-color .25s, border-color .25s;
+}
+.lk-teilen:hover { background:rgba(172,130,77,.3); border-color:var(--gold) }
+.lk-teilen svg { width:19px; height:19px }
+
+.lk-inhalt { position:relative; z-index:2; flex:1; padding:0 22px 28px; text-align:center }
+.lk-avatar { position:relative; width:136px; height:136px; margin:-82px auto 0; border-radius:50% }
+.lk-avatar::before {
+  content:""; position:absolute; inset:-3px; border-radius:50%;
+  background:conic-gradient(from 0deg, #6e4a26, #e9cf98, #fff1cc, #c79a5e, #7a532c, #b88a52, #ecd3a0, #6e4a26);
+}
+.lk-avatar img { position:relative; width:100%; height:100%; border-radius:50%; object-fit:cover; border:4px solid #000 }
+.lk-avatar .lk-live { position:absolute; right:6px; bottom:10px; width:16px; height:16px; border-radius:50%; background:var(--gold); border:3px solid #000; box-shadow:0 0 0 4px rgba(214,188,136,.18); animation:puls 2.6s ease-in-out infinite }
+
+.lk-name { margin:18px 0 0; line-height:1 }
+.lk-name .marke-klein {
+  display:block; font-family:var(--display); font-weight:600; font-size:3.6rem; line-height:.9; letter-spacing:-.06em; padding:.02em .06em .12em;
+  background:var(--metall); background-size:240% 100%; background-position:10% 0; -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.lk-name .zusatz { display:flex; align-items:center; justify-content:center; gap:12px; margin-top:4px; font-family:var(--sans); font-weight:500; font-size:.8rem; letter-spacing:.42em; text-transform:uppercase; color:var(--gold); padding-left:.42em }
+.lk-name .zusatz::before, .lk-name .zusatz::after { content:""; width:22px; height:1px; background:var(--bronze) }
+.lk-rolle { margin:16px 0 0; font-family:var(--sans); font-size:.74rem; font-weight:500; letter-spacing:.22em; text-transform:uppercase; color:var(--leise) }
+.lk-text { margin:14px auto 0; max-width:34ch; font-size:1rem; line-height:1.55; color:var(--champagner) }
+.lk-inhalt .status { margin-top:16px; font-size:.88rem }
+
+.lk-links { list-style:none; margin:26px 0 0; padding:0; display:grid; gap:12px; text-align:left }
+.lk-btn {
+  display:grid; grid-template-columns:42px minmax(0,1fr) 18px; align-items:center; gap:14px; min-height:66px; padding:12px 16px 12px 12px;
+  text-decoration:none; color:var(--champagner); border:1px solid var(--linie); border-radius:2px;
+  background:linear-gradient(180deg, rgba(20,17,12,.9), rgba(11,10,8,.9));
+  transition:border-color .25s, background-color .25s, transform .2s var(--ease);
+}
+.lk-btn:hover { border-color:var(--gold); background:rgba(172,130,77,.1) }
+.lk-btn:active { transform:scale(.985) }
+.lk-ico { width:42px; height:42px; display:grid; place-items:center; border-radius:50%; border:1px solid var(--linie-zart); color:var(--gold) }
+.lk-ico svg { width:20px; height:20px }
+.lk-btn b { display:block; font-family:var(--sans); font-weight:600; font-size:1rem; line-height:1.25; letter-spacing:.01em }
+.lk-btn small { display:block; margin-top:2px; font-family:var(--sans); font-size:.82rem; line-height:1.35; color:var(--leise) }
+.lk-pfeil { width:18px; height:18px; color:var(--gold); transition:transform .3s var(--ease) }
+.lk-btn:hover .lk-pfeil { transform:translateX(4px) }
+.lk-btn--gold { border-color:transparent; color:#140d05; background:var(--metall); background-size:180% 100%; background-position:30% 0; transition:background-position .6s var(--ease), transform .2s var(--ease) }
+.lk-btn--gold:hover { background:var(--metall); background-size:180% 100%; background-position:72% 0 }
+.lk-btn--gold small { color:rgba(20,13,5,.72) }
+.lk-btn--gold .lk-ico { border-color:rgba(20,13,5,.3); color:#140d05 }
+.lk-btn--gold .lk-pfeil { color:#140d05 }
+
+.lk-beweis { margin:28px 0 0; display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); border-top:1px solid var(--linie-zart); border-bottom:1px solid var(--linie-zart); list-style:none; padding:0 }
+.lk-beweis li { padding:16px 6px; border-left:1px solid var(--linie-zart) }
+.lk-beweis li:first-child { border-left:0 }
+.lk-beweis strong { display:block; font-family:var(--display); font-weight:500; letter-spacing:-.03em; font-size:1.45rem; line-height:1.1; color:var(--champagner) }
+.lk-beweis span { display:block; margin-top:4px; font-family:var(--sans); font-size:.72rem; line-height:1.35; color:var(--leise) }
+
+.lk-kontakt { margin-top:30px }
+.lk-kontakt .ornament { margin-bottom:14px }
+.lk-kontakt .ornament svg { width:58px }
+.lk-kontakt p { margin:0 0 14px; font-family:var(--sans); font-size:.76rem; font-weight:500; letter-spacing:.24em; text-transform:uppercase; color:var(--gold) }
+.lk-icons { list-style:none; margin:0; padding:0; display:flex; justify-content:center; gap:14px }
+.lk-icons a { width:54px; height:54px; display:grid; place-items:center; border-radius:50%; border:1px solid var(--linie); color:var(--champagner); transition:background-color .25s, border-color .25s, color .25s, transform .2s var(--ease) }
+.lk-icons a:hover { background:rgba(172,130,77,.16); border-color:var(--gold); color:var(--gold) }
+.lk-icons a:active { transform:scale(.94) }
+.lk-icons svg { width:22px; height:22px }
+
+.lk-fuss { padding:22px 22px 28px; border-top:1px solid var(--linie-zart); display:flex; flex-wrap:wrap; justify-content:center; gap:6px 18px; font-family:var(--sans); font-size:.8rem; color:var(--leise) }
+.lk-fuss a { color:var(--leise); text-decoration:none } .lk-fuss a:hover { color:var(--gold) }
+
+.lk-toast { position:fixed; left:50%; bottom:28px; z-index:60; transform:translate(-50%, 20px); opacity:0; pointer-events:none; padding:10px 16px; border:1px solid var(--linie); background:#000; color:var(--champagner); font-family:var(--sans); font-size:.9rem; transition:opacity .3s, transform .3s var(--ease) }
+.lk-toast.ist-da { opacity:1; transform:translate(-50%, 0) }
+
+@media (prefers-reduced-motion:no-preference) {
+  .lk-avatar::before { animation:drehen 9s linear infinite }
+  .lk-cover img { animation:licht 2.2s var(--ease) both }
+  .lk-rein { animation:steigen .9s var(--ease) both; animation-delay:calc(var(--i, 0) * 70ms + 150ms) }
+}
