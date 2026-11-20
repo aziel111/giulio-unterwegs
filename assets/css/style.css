@@ -321,14 +321,14 @@ a.status:hover { color:var(--gold) }
 .video-knopf:hover img { transform:scale(1.035); filter:brightness(1.06) }
 .video-knopf:focus-visible { outline:2px solid var(--gold); outline-offset:4px }
 .play {
-  position:absolute; z-index:2; left:50%; top:50%; width:56px; aspect-ratio:1; transform:translate(-50%, -50%);
+  position:absolute; z-index:2; right:12px; bottom:12px; width:48px; aspect-ratio:1;
   border-radius:50%; display:grid; place-items:center; background:rgba(0,0,0,.35); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px);
   border:1px solid rgba(233,207,152,.75); transition:transform .4s var(--ease), background-color .3s;
 }
 .play svg { width:32%; margin-left:8%; fill:var(--champagner) }
-.video-knopf:hover .play { transform:translate(-50%, -50%) scale(1.08); background:rgba(172,130,77,.35) }
+.video-knopf:hover .play { transform:scale(1.08); background:rgba(172,130,77,.35) }
 .video-knopf .neu {
-  position:absolute; z-index:2; left:12px; top:12px; padding:6px 10px 6px 9px; gap:8px;
+  position:absolute; z-index:2; left:12px; bottom:22px; padding:6px 10px 6px 9px; gap:8px;
   font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--champagner);
   background:rgba(0,0,0,.6); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); border:1px solid rgba(214,188,136,.35);
 }
