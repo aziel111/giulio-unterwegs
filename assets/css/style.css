@@ -327,6 +327,12 @@ a.status:hover { color:var(--gold) }
 }
 .play svg { width:32%; margin-left:8%; fill:var(--champagner) }
 .video-knopf:hover .play { transform:translate(-50%, -50%) scale(1.08); background:rgba(172,130,77,.35) }
+.video-knopf .neu {
+  position:absolute; z-index:2; left:12px; top:12px; padding:6px 10px 6px 9px; gap:8px;
+  font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; color:var(--champagner);
+  background:rgba(0,0,0,.6); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); border:1px solid rgba(214,188,136,.35);
+}
+.video-knopf .neu::before { width:7px; height:7px }
 @media (max-width:1000px) { .folgen-raster { grid-template-columns:repeat(3, minmax(0,1fr)) } }
 @media (max-width:640px) {
   .folgen-raster { grid-template-columns:none; grid-auto-flow:column; grid-auto-columns:64%; overflow-x:auto; scroll-snap-type:x mandatory; scroll-padding-inline:var(--rand); padding-bottom:12px; margin-inline:calc(var(--rand) * -1); padding-inline:var(--rand); scrollbar-width:none }
